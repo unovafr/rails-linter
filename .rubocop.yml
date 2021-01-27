@@ -1,0 +1,141 @@
+# Fichier à exclure du scope de Rubocop
+# les librairies externes lib/* et vendor/*
+# les configurations config/*
+# les éléments de la base de donnée db/*
+# le bin bin/**/*
+
+AllCops:
+  Exclude:
+    - "lib/**/*"
+    - "vendor/**/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "bin/**/*"
+
+# Règles de mise en forme - LAYOUT
+
+Layout/BeginEndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: begin
+
+Layout/ClassStructure:
+  Enabled: true
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - association
+    - public_attribute_macros
+    - public_delegate
+    - macros
+    - initializer
+    - public_class_methods
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+
+Layout/ClosingHeredocIndentation:
+  Enable: false
+
+Layout/ClosingParenthesisIndentation:
+  Enable: true
+
+Layout/IndentationStyle:
+  Enable: true
+  EnforcedStyle: tabs
+
+Layout/LineLength:
+  Enable: true
+  Max: 150
+
+Layout/MultilineAssignmentLayout:
+  Enable: true
+
+Layout/MultilineHashKeyLineBreaks:
+  Enable: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enable: true
+
+# Fin règles de mise en forme - LAYOUT
+
+# Règles de lint - LINT
+
+Lint/AmbiguousAssignment:
+  Enable: true
+
+Lint/DuplicateBranch:
+  Enable: true
+
+# Fin règles de lint - LINT
+
+# Règles de métriques - METRICS
+
+Metrics/AbcSize:
+  Enable: true
+  Max: 25
+
+Metrics/BlockLength:
+  Enable: true
+  Max: 50
+  CountAsOne:
+    - array
+    - hash
+
+Metrics/ClassLength:
+  Enable: true
+  Max: 150
+  CountAsOne:
+    - array
+    - hash
+
+Metrics/MethodLength:
+  Enable: true
+  Max: 50
+  CountAsOne:
+    - array
+    - hash
+
+Metrics/ModuleLength:
+  Enable: true
+  Max: 150
+  CountAsOne:
+    - array
+    - hash
+
+# Fin règles de métriques - METRICS
+
+# Règles de style - STYLE
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/IpAddresses:
+  Enabled: true
+
+Style/TrailingMethodEndStatement:
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: no_comma
+
+Style/EmptyElse:
+  EnforcedStyle: both
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+# Fin règles de style - STYLE
